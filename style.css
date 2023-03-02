@@ -63,6 +63,8 @@ body {
   color: black;
 }
 .currentScoreTitle {
+  display: flex;
+  justify-content: center;
   font-family: "Rampart One", cursive;
   font-size: 28px;
 }
