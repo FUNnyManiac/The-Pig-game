@@ -1,14 +1,14 @@
-//Получаем кнопки
 const restartBtn = document.querySelector("#restartGame");
 const rollBtn = document.querySelector("#rollCube");
 const keepScoreBtn = document.querySelector("#keepScore");
-
 const player1 = document.querySelector(".player-0");
 const player2 = document.querySelector(".player-1");
 
 const dice = document.querySelector(".dice");
 
-//Получаем поля игрока 1
+const modalWindow = document.querySelector(".modal-window");
+const closeModalWindowBtn = document.querySelector(".close-modal-btn");
+const showModalWindowBtn = document.querySelector(".show-rules");
 
 let currentPlayer = 0;
 let currentValue = 0;
@@ -79,4 +79,11 @@ restartBtn.addEventListener("click", () => {
   document.getElementById(`totalScore-1`).textContent = 0;
   rollBtn.disabled = false;
   keepScoreBtn.disabled = false;
+});
+
+showModalWindowBtn.addEventListener("click", () => {
+  modalWindow.classList.toggle("hidden");
+});
+closeModalWindowBtn.addEventListener("click", () => {
+  modalWindow.classList.toggle("hidden");
 });
